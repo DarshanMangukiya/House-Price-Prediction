@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>Banglore Home Price Prediction</title>
+        <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <!-- Font special for pages-->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Vendor CSS-->
+    <link href="vendor/select2/select2.min.css" rel="stylesheet" media="all">
+    <link href="vendor/datepicker/daterangepicker.css" rel="stylesheet" media="all">
+
+    <!-- Main CSS-->
+    <link href="css/main.css" rel="stylesheet" media="all">
+        <style>
+            .div {
+                align-items: center;
+            }
+            .button {
+              display: inline-block;
+              padding: 15px 25px;
+              font-size: 24px;
+              cursor: pointer;
+              text-align: center;
+              text-decoration: none;
+              outline: none;
+              color: #fff;
+              background-color: #4CAF50;
+              border: none;
+              border-radius: 15px;
+              box-shadow: 0 9px #999;
+            }
+            
+            .button:hover {background-color: #3e8e41}
+            
+            .button:active {
+              background-color: #3e8e41;
+              box-shadow: 0 5px #666;
+              transform: translateY(4px);
+            }
+
+            .card {
+  overflow: hidden;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background: #fff;
+}
+
+.card-1 {
+  -webkit-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 8px 20px 0px rgba(0, 0, 0, 0.15);
+}
+
+/*.card-1 .card-heading {
+  background: url("bg-head-02.jpg") center center/cover no-repeat;
+  padding-top: 210px;
+}*/
+
+.card-1 .card-body {
+  padding: 0 90px;
+  padding-top: 55px;
+  padding-bottom: 65px;
+}
+
+@media (max-width: 767px) {
+  .card-1 .card-body {
+    padding: 0 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+            </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+    
+    </head>
+    <body>
+        <div class="page-wrapper bg-blue p-t-100 p-b-100 font-robo">
+            <div class="wrapper wrapper--w680">
+                <div class="card card-1">
+                    <div class="card-heading"></div>
+                    <div class="card-body">
+                        <h2 class="title">Details about house</h2>
+                        <form>
+                            <h3>Area (Square Feet)</h3>
+                            <input type = "email" id="uisqft" name="sqft" value="1000"/>
+                            <br><br>
+                            <h3>BHK </h3>
+                            <input type="number" id="uibhk" name="bhk" value="2"/>
+                            <br><br>
+                            <h3>Bath</h3>
+                            <input type="number" id="uibath" name="bath" value="2"/>
+                            <br><br>
+                            <h3>location</h3>
+                            <select name="" id="uilocations">
+                                <option>Rajaji Nagar</option>
+                                <option>Electronic city</option>
+                            </select>
+                            <br><br>
+                            <button class="button" type="button" onclick="onClickedEstimatePrice()">Estimate Price</button>
+                            <br><br>
+                            <div id="uiEstimatedPrice"><h3></h3></div>
+                            </form>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
